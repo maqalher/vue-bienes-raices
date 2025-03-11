@@ -1,0 +1,84 @@
+npm create vite@latest
+|
+o  Project name:
+|  vue-bienes-raices
+|
+o  Select a framework:
+|  Vue
+|
+o  Select a variant:
+|  Official Vue Starter ↗
+
+Vue.js - The Progressive JavaScript Framework
+
+√ Add TypeScript? ... No / Yes
+√ Add JSX Support? ... No / Yes
+√ Add Vue Router for Single Page Application development? ... No / Yes
+√ Add Pinia for state management? ... No / Yes
+√ Add Vitest for Unit Testing? ... No / Yes
+√ Add an End-to-End Testing Solution? » No
+√ Add ESLint for code quality? » No
+
+  npm install
+  npm run dev
+
+
+https://vuetifyjs.com/en/
+    npm install vuetify
+
+    en main.js
+        // Vuetify
+        import 'vuetify/styles'
+        import { createVuetify } from 'vuetify'
+        import * as components from 'vuetify/components'
+        import * as directives from 'vuetify/directives'
+
+        const vuetify = createVuetify({
+            components,
+            directives
+        })
+        app.use(vuetify)
+
+    iconos 
+        npm i @mdi/font
+        en main.js
+            import '@mdi/font/css/materialdesignicons.css'
+
+vee-validate
+https://vee-validate.logaretm.com/v4/
+    npm install vee-validate
+
+firebase maqal vuebienesraices
+
+npm install firebase
+npm install vuefire
+
+crear .env.local con las credenciales
+crear config/firebase.js
+    import { initializeApp } from 'firebase/app'
+
+    const firebaseConfig = {
+    apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+    authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+    projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+    storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+    messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+    appId: import.meta.env.VITE_FIREBASE_APP_ID,
+    }
+
+    export const firebaseApp = initializeApp(firebaseConfig)
+
+    en main.js
+        // Firebase
+        import { VueFire, VueFireAuth } from 'vuefire'
+        import { firebaseApp } from './config/firebase'
+
+        app.use(VueFire, {
+            firebaseApp,
+            modules: [VueFireAuth()]
+        })
+
+npm install uid
+
+vue-leafle
+     npm i @vue-leaflet/vue-leaflet leaflet
