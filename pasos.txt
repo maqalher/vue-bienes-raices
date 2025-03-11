@@ -82,3 +82,6 @@ npm install uid
 
 vue-leafle
      npm i @vue-leaflet/vue-leaflet leaflet
+
+
+vercel.json para error de recarga en vercel
